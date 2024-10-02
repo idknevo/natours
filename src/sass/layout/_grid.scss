@@ -1,0 +1,32 @@
+.grid {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: grid;
+  column-gap: $column-gap;
+  &--container {
+    max-width: $grid-width;
+    display: grid;
+    row-gap: $row-gap;
+    margin: 0 auto;
+  }
+  &-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    .col-2-of-3 {
+      grid-column: span 2;
+    }
+  }
+  &-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    .col {
+      &-2-of-4 {
+        grid-column: span 2;
+      }
+      &-3-of-4 {
+        grid-column: span 3;
+      }
+    }
+  }
+}

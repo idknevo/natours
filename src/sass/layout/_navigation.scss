@@ -1,0 +1,167 @@
+.navigation {
+  &__button {
+    background-color: $color-white;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    cursor: pointer;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2.5px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon {
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__background {
+    width: 6rem;
+    height: 6rem;
+    background-image: radial-gradient($color-main-light, $color-main-dark);
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+  }
+
+  &__nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    transform: translateX(-100%);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &__list {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  &__item {
+    counter-increment: link;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: 1rem 2rem 1rem 5rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 300;
+      background-image: linear-gradient(
+        120deg,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 230%;
+      transition: all 0.4s;
+      position: relative;
+      &::after {
+        content: "0" counter(link);
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 0.5rem;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-main;
+    }
+  }
+}
+
+.nav__open {
+  .navigation {
+    &__background {
+      transform: scale(80);
+    }
+
+    &__nav {
+      transform: translateX(0);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    &__icon {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        transform: rotate(-135deg);
+      }
+    }
+
+    &__button:hover .navigation__icon {
+      &::before,
+      &::after {
+        top: 0;
+      }
+    }
+  }
+}
