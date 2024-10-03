@@ -12,6 +12,21 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  @include media-query(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+
+  @include media-query(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include media-query(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include media-query(phone) {
+    font-size: 43.75%;
+  }
 }
 
 body {
