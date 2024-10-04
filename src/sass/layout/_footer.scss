@@ -3,6 +3,9 @@
   padding: 10rem 0 5rem;
   font-size: 1.4rem;
   color: $color-grey-light-1;
+  @include media-query(tab-port) {
+    padding: 5rem 0 2.5rem;
+  }
 
   &__logo-box {
     text-align: center;
@@ -18,12 +21,21 @@
     border-top: 1px solid $color-grey-dark-1;
     width: fit-content;
     padding-top: 2rem;
+
+    @include media-query(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+
+    @include media-query(tab-port) {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -49,9 +61,17 @@
     border-top: 1px solid $color-grey-dark-1;
     padding-top: 2rem;
     width: fit-content;
+
+    @include media-query(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .grid {
     gap: 22rem;
+    @include media-query(tab-port) {
+      max-width: 100%;
+    }
   }
 }

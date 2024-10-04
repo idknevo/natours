@@ -9,6 +9,9 @@
     font-weight: 400;
     letter-spacing: 3rem;
     animation: moveFromLeft 1s ease-out;
+    @include media-query(phone) {
+      letter-spacing: 1rem;
+    }
   }
   &--sub {
     display: block;
@@ -17,6 +20,9 @@
     letter-spacing: 1.5rem;
     animation: moveFromRight 1s ease-out 1s;
     animation-fill-mode: backwards;
+    @include media-query(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -30,6 +36,12 @@
   background-clip: text;
   color: transparent;
   transition: all 0.2s;
+  @include media-query(tab-port) {
+    font-size: 3rem;
+  }
+  @include media-query(phone) {
+    font-size: 2.5rem;
+  }
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);

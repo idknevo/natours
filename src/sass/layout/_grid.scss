@@ -3,10 +3,16 @@
   margin: 0 auto;
   display: grid;
   column-gap: $column-gap;
+  @include media-query(tab-port) {
+    grid-template-columns: 1fr !important;
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
   &--container {
-    max-width: $grid-width;
-    display: grid;
     row-gap: $row-gap;
+    @include media-query(tab-port) {
+      row-gap: $row-gap-sm;
+    }
     margin: 0 auto;
   }
   &-2-cols {
