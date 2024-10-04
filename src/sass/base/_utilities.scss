@@ -4,9 +4,15 @@
   }
   &-margin-bottom-lg {
     margin-bottom: 8rem !important;
+    @include media-query(tab-port) {
+      margin-bottom: 5rem !important;
+    }
   }
   &-margin-bottom-md {
     margin-bottom: 4rem !important;
+    @include media-query(tab-port) {
+      margin-bottom: 3rem !important;
+    }
   }
   &-margin-bottom-sm {
     margin-bottom: 1.5rem !important;
