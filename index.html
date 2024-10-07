@@ -390,11 +390,30 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="src/media/logo-green-2x.png"
+        <picture class="footer__logo">
+          <source
+            srcset="
+              src/media/logo-green-small-1x.png 1x,
+              src/media/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="
+              src/media/logo-green-1x.png 1x,
+              src/media/logo-green-2x.png 2x
+            "
+            alt="Full logo"
+          />
+        </picture>
+        <!-- <img
+          srcset="
+            src/media/logo-green-1x.png 1x,
+            src/media/logo-green-2x.png 2x
+          "
           alt="Full logo"
           class="footer__logo"
-        />
+        /> -->
       </div>
       <div class="grid grid-2-cols">
         <div class="footer__navigation">
