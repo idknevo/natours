@@ -56,6 +56,10 @@
   &__img {
     display: block;
     width: 100%;
+    // height: 50%;
+    @include media-query(tab-port) {
+      display: none;
+    }
   }
 
   &__text {
@@ -64,10 +68,19 @@
     column-gap: 3rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+    @include media-query(tab-port) {
+      column-count: 1;
+      column-gap: 0;
+      column-rule: none;
+    }
   }
 
   .grid {
     gap: 0;
+    @include media-query(tab-port) {
+      max-width: 70rem;
+    }
   }
 }
 

@@ -20,6 +20,7 @@
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
+
   & > * {
     transform: skewY(7deg);
   }
@@ -45,6 +46,15 @@
 
   @include media-query(tab-port) {
     padding: 10rem 0;
+    .grid {
+      max-width: 70rem;
+    }
+  }
+
+  @include media-query(phone) {
+    .grid {
+      max-width: 50rem;
+    }
   }
 }
 
@@ -72,8 +82,34 @@
   border-radius: $main-border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
+  @include media-query(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 65%,
+        transparent 35%
+      ),
+      url(../media/nat-10.jpg);
+  }
+
+  @include media-query(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../media/nat-10.jpg);
+  }
+
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include media-query(tab-land) {
+      width: 65%;
+    }
+
+    @include media-query(tab-port) {
+      width: 100%;
+    }
   }
 }
