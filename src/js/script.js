@@ -46,3 +46,9 @@ popupBtn.addEventListener("click", function () {
 popupOverlay.addEventListener("click", function () {
   popupWindow.classList.remove("popup-open");
 });
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && popupWindow.classList.contains("popup-open")) {
+    popupWindow.classList.remove("popup-open");
+  }
+});

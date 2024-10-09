@@ -28,6 +28,7 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
     @include media-query(phone) {
       transform: translateX(-3rem) skewX(0);
     }
