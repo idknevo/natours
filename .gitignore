@@ -1,4 +1,4 @@
 .parcel-cache
 dist
 node_modules
-/src/css/style.compiles.css
+/src/css/style.compiled.css
