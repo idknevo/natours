@@ -1,5 +1,4 @@
 .parcel-cache
 dist
 node_modules
-style.compiled.css
-style.prefix.css
+.DS_Store
