@@ -123,6 +123,11 @@
       background-size: 230%;
       transition: all 0.4s;
       position: relative;
+
+      @include media-query(phone) {
+        font-size: 2rem;
+      }
+
       &::after {
         content: "0" counter(link);
         position: absolute;
