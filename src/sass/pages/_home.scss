@@ -36,7 +36,7 @@
   margin-top: -10rem;
 
   @include media-query(tab-port) {
-    padding: 20rem 0 5rem;
+    padding: 20rem 0 10rem;
   }
 }
 
@@ -45,7 +45,7 @@
   position: relative;
 
   @include media-query(tab-port) {
-    padding: 5rem 0;
+    padding: 5rem 0 10rem;
     .grid {
       max-width: 70rem;
     }
