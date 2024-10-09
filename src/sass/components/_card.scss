@@ -132,6 +132,9 @@
         &:not(:last-child) {
           border-bottom: 1px solid $color-grey-light-2;
         }
+        @include media-query(tab-port) {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -195,11 +198,11 @@
       margin-bottom: 3rem;
     }
     &__price-only {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
     }
     &__price-value {
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: 300;
     }
   }

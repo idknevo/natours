@@ -43,6 +43,7 @@
       z-index: 999;
     }
     @include media-query(tab-port) {
+      margin-top: 3rem;
       box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
       width: calc(100% / 3);
       position: initial;

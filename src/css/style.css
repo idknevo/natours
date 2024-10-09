@@ -200,6 +200,11 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important;
 }
+@media (max-width: 56.25em) {
+  .u-margin-top-huge {
+    margin-top: 6rem !important;
+  }
+}
 
 .bg-video {
   position: absolute;
@@ -386,6 +391,11 @@ body {
 .card__details-list .list-item:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
+@media (max-width: 56.25em) {
+  .card__details-list .list-item {
+    font-size: 2rem;
+  }
+}
 .card__cta {
   width: 100%;
   position: absolute;
@@ -441,11 +451,11 @@ body {
     margin-bottom: 3rem;
   }
   .card__price-only {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
   }
   .card__price-value {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 300;
   }
 }
@@ -504,6 +514,7 @@ body {
 }
 @media (max-width: 56.25em) {
   .composition__photo {
+    margin-top: 3rem;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
     width: 33.3333333333%;
     position: initial;
@@ -950,11 +961,6 @@ body {
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../media/hero.jpg");
   }
 }
-@media (max-width: 37.5em) {
-  .header {
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  }
-}
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -1090,6 +1096,7 @@ body {
 @media (max-width: 37.5em) {
   .navigation__link:link, .navigation__link:visited {
     font-size: 2rem;
+    font-weight: 500;
   }
 }
 .navigation__link:link::after, .navigation__link:visited::after {
@@ -1164,7 +1171,7 @@ body {
 }
 @media (max-width: 56.25em) {
   .section--tours {
-    padding: 20rem 0 10rem;
+    padding: 20rem 0 5rem;
   }
 }
 
@@ -1174,7 +1181,7 @@ body {
 }
 @media (max-width: 56.25em) {
   .section-stories {
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
   .section-stories .grid {
     max-width: 70rem;

@@ -126,6 +126,7 @@
 
       @include media-query(phone) {
         font-size: 2rem;
+        font-weight: 500;
       }
 
       &::after {

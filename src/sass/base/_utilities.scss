@@ -22,5 +22,8 @@
   }
   &-margin-top-huge {
     margin-top: 10rem !important;
+    @include media-query(tab-port) {
+      margin-top: 6rem !important;
+    }
   }
 }
